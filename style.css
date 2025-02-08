@@ -1,0 +1,500 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+  *{padding: 0;
+margin: 0;
+box-sizing: border-box;}
+html{
+    scroll-behavior: smooth;
+}
+body{font-family: 'Quicksand', sans-serif;;}
+
+
+ul{/*ينحي الداىرة متاع القائمة */
+    list-style: none;}
+a{/*ينحي الخط اللي تحت التاق*/
+    text-decoration: none;}
+
+.CONTAINER{
+    /* نخلو ال ABOUT يجي ف النص*/
+    max-width: 1100PX;
+    margin: auto;
+}
+
+    /*utility classes  كلاسز نستخدمها اكثر من مرة*/
+.primary-text{
+    color: #e4b95b;
+}
+.btn{
+    display:inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+}
+.btn-primary{
+    color: white;
+    border: 1px solid white;
+}
+.BTN-SECONDARY{
+    color: white;
+    background: #383848;
+    margin-top: 2rem;
+}
+.btn-primary:hover,
+ .BTN-SECONDARY:hover{
+background-color: #e4b95b;
+}
+
+
+/* header start   */
+header{height: 100vh;
+background: url(./img/home_bg.jpeg)center center/cover no-repeat;/*تجي ف الوسط ومتتعاودش*/
+position: relative;/*باش نقدرو نتحكمو ف شفافية الصورة*/
+}
+#navbar{/*التحكم ف الصورة والتاقات*/
+    display: flex;/*يخلي الصورة والتاقات بحدا بعض*/
+    justify-content: space-between;/*يخلي فراغ بين الصورة والتاقات*/
+    align-items: center;/* يجو ف النص*/
+
+}
+#navbar img{/*التحكم ف الصورة بس*/
+    width: 80px;
+    margin-left: 100px;
+}
+#navbar ul{/*التحكم ف التاقات بس*/
+    display: flex;/*يخلي التاقات بحدا بعض*/
+margin-right: 100px;}
+#navbar ul li a{
+    /*باش نخلو فراغ بين التاقات بنحددو كل تاق بروحه*/
+padding: 15px 20px;/*15 من فوق وتحت */ /*20 من الجنبين*/
+ color: white;  
+ font-weight: 600;
+}
+#navbar ul li a:hover{/*يدير خط تحت التاق لما نمرو عليه*/
+    border-bottom:2px solid #e4b95b ;
+}
+
+header .content{
+
+    display: flex;
+    flex-direction: column;/*يجو تحت بعض*/
+    justify-content: center;/*يجو ف الوسط*/
+    align-items: center;
+height: 75%;/*باش يجي الكلام ف منتصف الشاشة*/}
+
+header .content h1{
+    font-size: 40px;
+    color: white;
+}
+header .content p{
+    margin: 20px 0px 40px;
+    color: white;
+}
+header::before{/*يديرلك طبقة فوق الهيدير تابع اللي درناه فوق ف الهيدير باش نتحكمو ف الصورة*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:rgb(0, 0, 0,0.6);/*نقصنا شفافية الصورة */
+}
+
+header *{/*باش يبرز محتويات الهيدير ومتغطيهاش شفافية الصورة*/
+    z-index: 10;
+}
+
+/* header end */
+
+/*ABOUT START*/
+
+#ABOUT{
+    height: 80VH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+#ABOUT .TITLE,
+#OFFERS .TITLE,
+#menu .TITLE{
+text-align: center;/*نخلو العنوان يجي ف النص*/
+margin-bottom: 4rem;/*باش نفصلوه ع الباراقراف*/
+
+}
+#ABOUT H2 ,
+#OFFERS H2,
+#menu h2,
+#gallery h2
+{
+font-size: 40PX;
+margin-bottom: 20PX;
+}
+#ABOUT H2,
+#menu h2
+{
+    color:#383848; 
+}
+#ABOUT .TITLE P,
+#menu .TITLE p
+{
+font-size: 14PX;
+color: #9a9a9a;
+font-weight: 600;
+
+}
+#ABOUT .ABOUT-CONTENT{
+display: flex;
+justify-content: space-between;
+
+
+}
+#ABOUT .ABOUT-CONTENT IMG{
+
+    width: 450PX;
+}
+#ABOUT .ABOUT-CONTENT P{
+color: #9a9a9a;
+margin-right: 7rem;
+font-weight: 500;
+line-height: 1.6;
+}
+
+
+/*ABOUT END*/
+/*offers start*/
+#OFFERS{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    background: url(./img/offer-background.jpg) center center/cover fixed;/*فسكسيد الصورة تقعد ثابتة لما نتحركو */
+}
+#OFFERS H2{
+    color: #e4b95b;
+}
+#OFFERS  .TITLE p{
+color: #fff;
+font-weight: 500;
+}
+#OFFERS .OFFERS-ITEMS{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: #fff;
+}
+#OFFERS .OFFERS-ITEMS img{
+    width: 200px;
+}
+#OFFERS .OFFERS-ITEMS h3{
+    font-size: 25px;
+    margin: 15px 0;
+}
+#OFFERS .OFFERS-ITEMS p{
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+#OFFERS .OFFERS-ITEMS span{
+font-size: 18px;
+font-weight: 600;
+margin-left: 5px;
+}
+/*offers end*/
+
+/*menu start*/
+#menu{
+    background: #f4f4f4;
+    padding: 5rem 0;
+}
+
+#menu .menu-items{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu .menu-items .menu-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+#menu .menu-items .menu-item img{
+
+    width: 80px;
+    border-radius: 50%;/*باش تبدا مدورة*/
+    margin-right: 20px;
+}
+#menu .menu-items .menu-item h3{
+color: #383848;
+border-bottom: 1px dashed #b2bdbd;
+padding-bottom: 10px;
+margin-bottom: 10px;/*المارجن بعد البوتوم والبادينق داخل البوتوم*/
+position: relative;
+}
+#menu .menu-items .menu-item span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*الاسبان يجي ع اليمين */
+}
+
+#menu .btn{  
+    display: block;
+    margin:20px  auto 0;/* نخلو شوية مساحة ويجي ف النص*/
+    background: #e4b95b;
+    color:#fff;
+    cursor: pointer;/*يتغير شكل السهم لما نحطوه عليه */
+}
+
+#menu .btn:hover{
+    background: #383848;
+}
+
+/*menu end*/
+/*daytime start*/
+#daytime{
+
+    background: url(./img/daytime_bg.jpeg) center center/cover fixed no-repeat;/*فكسيد تخليها ثابتة متتحركش لما نديرو سكور*/
+    color: #fff;
+    text-align: center;
+}
+
+#daytime .daytime-items{
+    display: flex;
+    justify-content: space-evenly;/*يخلي مساحة بين الايتيمز*/
+    align-items: center;
+height: 40vh;
+}
+#daytime .daytime-items h3{
+    font-size: 32px;
+    margin:20px 0 10px ;
+}
+#daytime .daytime-items p{
+    font-weight: 500;
+}
+
+
+/*daytime end*/
+
+/*Gallery start */
+#gallery{
+    background: url(./img/offer-background.jpg) center center/cover no-repeat;
+    padding: 8rem 0 6rem;
+}
+#gallery h2{
+    color: #fff;
+    text-align: center;
+}
+#gallery .img-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;/*كل ماالصورة تقل عن الحجم اللي عاطيينه تنزل تحت فيجو كل مجموعة ف سطر */
+}
+
+#gallery .img-gallery img{
+width: 280px;
+height: 200px;
+border-radius: 15px;
+margin: 20px;
+opacity: 0.8;
+}
+#gallery .img-gallery img:hover{
+    opacity: 1;/*لما نتحركو بالماوس عليها ترجع الاوباسيتي كاملةة
+    
+    
+    */
+}
+
+/*Gallery end*/
+/*contact start*/
+#contact {
+
+    padding: 5rem 0;
+    background: #f4f4f4;
+}
+#contact .CONTAINER {
+    max-width: 900px;
+}
+#contact .contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact .contact-content  .contact-info{
+    width: 50%;
+}
+
+
+#contact .contact-content  .contact-info div {
+    margin: 30px 0;
+    line-height: 1.7;
+}
+
+#contact .contact-content  .contact-info h3 {
+    font-size: 28px;
+    color: #383848;
+    margin-bottom: 10px;
+}
+
+#contact .contact-content  .contact-info p{
+    color: #9a9a9a;
+}
+
+#contact .contact-content  .contact-info i {
+    color: #e4b95b;
+    margin-right: 5px ;
+}
+
+#contact .contact-content  .contact-info a i {
+
+    color: #fff;
+    background-color: #383848;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+#contact .contact-content  .contact-info a i:hover { background: #e4b95b;
+    color: #383848;
+}
+form {
+    width: 50%;
+}
+form input ,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: none;
+    color: #e3e2dd;
+}
+#contact .btn{
+    background: #e4b95b;
+    color: #fff;
+    cursor: pointer;
+}
+#contact .btn:hover{
+    background-color: #383848;
+}
+/*contact end*/
+#footer {
+    background: #383848;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+}
+#footer a{
+    color: #fff;
+}
+/*footer end*/
+/*re start*/
+/*medum screen + tablet*/
+@media( max-width:1000px){
+    #navbar img{
+        margin-left: 20px;
+    }
+    #navbar ul{
+        margin-right: 20px;
+    }
+
+    #navbar ul li a{
+        padding: 10px;
+    }
+    header .content h1{
+        font-size: 28px;
+    }
+    #ABOUT{
+        height: auto;
+        padding: 4rem 2rem;
+    }
+    
+#ABOUT .ABOUT-CONTENT P{
+    margin-right: 2rem;
+}
+
+#ABOUT .ABOUT-CONTENT IMG{
+    width: 250px;}
+    
+#OFFERS .OFFERS-ITEMS img{
+    width: 150px;
+}
+
+#OFFERS .OFFERS-ITEMS h3{
+    font-size: 18px;
+}
+
+#menu .menu-items{
+    display: block;
+}
+
+#contact .contact-content{
+
+    flex-direction: column;
+}
+/*mobail*/
+@media ( max-width:600px){
+
+    #navbar{
+        flex-direction: column;
+    }
+
+    #navbar img{
+        margin-bottom: 20px;
+    }
+    
+    header .content h1{
+        font-size: 18px;
+    }
+    header .content p{font-size: 14px;}
+    
+#ABOUT .ABOUT-CONTENT{
+    flex-direction: column;
+}
+
+#ABOUT .ABOUT-CONTENT A{
+margin: 2rem 0;
+}
+
+#ABOUT .ABOUT-CONTENT IMG{
+    margin: auto;
+}
+
+#OFFERS .OFFERS-ITEMS{
+    flex-direction: column;
+}
+#OFFERS{
+    height: auto;
+    padding: 30px 10px;
+}
+
+#menu .menu-items .menu-item{
+    margin: 20px 10px;
+}
+
+#daytime .daytime-items{display: block;
+height: auto;
+padding: 30px 0;
+}
+
+#daytime .daytime-items .daytime-item {
+    margin-top: 20px;
+}
+
+#contact .contact-content  .contact-info , 
+form{
+    width: 80%;
+}
+
+}
+}
+
+
+
